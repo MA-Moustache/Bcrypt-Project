@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body class="container">
+        <header>
+            <%- include('../partials/header'); %>
+        </header>
+
+        <main>
+            <form action="/ex10" method="post">
+                Plaintext: <input type="text" name="plaintext"/>
+                <input type="submit" value="Calculate !"/><br>
+            </form>
+            <br>
+            <h4>15 rounds is nice, I'm not 20 anymore 👴</h4>
+            <br>
+
+            <table>
+                <% if (times.length > 0) { %>
+                    <tr>
+                        <th>Rounds</th><th>Time to compare</th>
+                     </tr>
+                <% } %>
+
+             
+                <% for (var i = 0; i < times.length; i++) { %>
+                 <tr>
+                   <td><%= i+4 %></td>
+                   <td><%= times[i].timeToCompare %></td>
+                 </tr>    
+                <% } %>
+             </table>
+        </main>
+
+        <footer>
+            <%- include('../partials/footer'); %>
+        </footer>
+
+    </body>
+</html>

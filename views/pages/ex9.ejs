@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body class="container">
+        <header>
+            <%- include('../partials/header'); %>
+        </header>
+
+        <main>
+            <form action="/ex9" method="post">
+                Password: <input type="text" name="password"/>
+                <input type="submit" value="Verify !"/><br>
+            </form>
+            <br>
+            <h4>This function will compare the password you entered in exercice 1, please enter a password in exercice 1 first 🧐</h4>
+            <br>
+
+            Valid: <p><%= valid %></p>
+        </main>
+
+        <footer>
+            <%- include('../partials/footer'); %>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body class="container">
+        <header>
+            <%- include('../partials/header'); %>
+        </header>
+
+        <main>
+            <form action="/ex1" method="post">
+                Text to hash: <input type="text" name="plaintext"/>
+                <input type="submit" value="HASH !"/><br>
+            </form>
+            <br>
+            <h4>This data won't be transmitted to Mark Zuckerberg. (I promise 👀)</h4>
+            <br>
+
+            Plaintext: <p><%= plaintext %></p>
+            Salt: <p><%= salt %></p>
+            Hash: <p><%= hash %></p>
+        </main>
+
+        <footer>
+            <%- include('../partials/footer'); %>
+        </footer>
+
+    </body>
+</html>

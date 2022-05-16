@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body class="container">
+        <header>
+            <%- include('../partials/header'); %>
+        </header>
+
+        <main>
+            <form action="/ex2" method="post">
+                Text to hash: <input type="text" name="plaintext" value="test"/>
+                <input type="submit" value="Calculate !"/><br>
+            </form>
+            <br>
+            <h4>The process can take between 15 and 20 minutes, get yourself a coffee ☕ ...</h4>
+            <table>
+                <% if (times.length > 0) { %>
+                    <tr>
+                        <th>Rounds</th><th>Time to salt</th><th>Time to hash</th>
+                     </tr>
+                <% } %>
+
+             
+                <% for (var i = 0; i < times.length; i++) { %>
+                 <tr>
+                   <td> <%= i+4 %> </td>
+                   <td><%= times[i].timeToSalt %></td>
+                   <td><%= times[i].timeToHash %></td>
+                 </tr>    
+                <% } %>
+             </table>
+        </main>
+
+        <footer>
+            <%- include('../partials/footer'); %>
+        </footer>
+
+    </body>
+</html>
