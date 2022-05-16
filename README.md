@@ -1,4 +1,4 @@
-# Bcrypt project - Michael Genique
+# Bcrypt project - MA-Moustache
 
 A cryptography project
 
